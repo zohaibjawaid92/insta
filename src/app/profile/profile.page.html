@@ -1,0 +1,83 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content> -->
+
+
+
+<ion-header>
+  <ion-toolbar class="insta-feed-header">
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title class="insta-font" >
+      Zohaib Jawaid
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="paper-plane"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+    
+    <ion-content>
+      <ion-grid class="profile-intro">
+        <ion-row>
+          <ion-col col-3>
+            <img class="profile-photo" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+          </ion-col>
+          <ion-col col-6>
+            <div class="profile-info">
+              <div class="post-count info-square">
+                <p>
+                  <strong>1</strong><br>
+                  <b>post</b>
+                </p>
+              </div>
+              <div class="follower-count info-square">
+                <p>
+                  <strong>1532</strong><br>
+                  <b>followers</b>
+                </p>
+              </div>
+              <div class="following-count info-square">
+                <p>
+                  <strong>200</strong><br>
+                  <b>following</b>
+                </p>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    
+      <div class="more-details">
+        <p class="user-name"><strong>Zohaib Jawaid</strong></p>
+        <p class="user-bio">Ionic Developer</p>
+      </div>
+    
+      <ion-segment color="primary">
+        <ion-segment-button value="posts" selected>
+          <ion-icon name="grid"></ion-icon>    
+        </ion-segment-button>
+        <ion-segment-button value="tagged">
+            <ion-icon name="person"></ion-icon>
+          </ion-segment-button>
+        <ion-segment-button value="bookmark">
+          <ion-icon name="bookmark"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+    
+      <ion-grid class="image-grid">
+        <ion-col *ngFor="let pic of picturesFeeds" class="single-row">
+          <ion-row class="single-image">
+            <img height="50%" width="100%" [src]="pic.download_url">
+          </ion-row>
+        </ion-col>
+      </ion-grid>
+    </ion-content>
